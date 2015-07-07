@@ -23,6 +23,8 @@ public class SpawnOneObject : MonoBehaviour {
 		_startPosition = transform.position; 
 
 		GameObject myGameObject = Instantiate (RandomGameObject); 
+		float scaler = Random.Range (.2f, .7f); 
+		myGameObject.transform.localScale = new Vector3 (scaler, scaler, scaler);
 		myGameObject.transform.position = transform.position; 
 	}
 	
@@ -30,9 +32,11 @@ public class SpawnOneObject : MonoBehaviour {
 	void Update () {
 		_counter++; 
 
-		if (Random.value < .1)
+		if (Random.value < .06)
 		{
 			GameObject myGameObject = Instantiate (RandomGameObject); 
+			//float scaler = Random.Range (.5f, 1f); 
+			//myGameObject.transform.localScale = new Vector3 (scaler, scaler, scaler);
 			myGameObject.transform.position = transform.position; 
 		}
 
