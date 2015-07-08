@@ -11,7 +11,7 @@ public class WoodChipperMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float horizontalAxis = Input.GetAxis ("Horizontal")/2; 
+		float horizontalAxis = Input.GetAxis ("Horizontal")/20; 
 
 		if (horizontalAxis < 0 && transform.position.x > -10 ||
 		    horizontalAxis >= 0 && transform.position.x < 10) {
