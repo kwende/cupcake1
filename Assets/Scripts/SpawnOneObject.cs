@@ -40,7 +40,7 @@ public class SpawnOneObject : MonoBehaviour {
 			myGameObject.transform.position = transform.position; 
 		}
 
-		if (_counter % 10 == 0) {
+		if (System.Math.Abs(transform.position.x) >= 13) {
 			_goingRight = !_goingRight; 
 		}
 
